@@ -28,7 +28,7 @@ public class NetworkManager {
                 case .success(let result):
                     observer(.success(result))
                 case .failure(let error):
-                    observer(.error(NetworkManager.unwrap(error: error)))
+                    observer(.failure(NetworkManager.unwrap(error: error)))
                 }
 
                 if let postDelay = postDelay {
@@ -56,7 +56,7 @@ public class NetworkManager {
 
         return Single<Mapper.T>.create { [weak self] observer in
             guard let manager = self else {
-                observer(.error(NetworkManager.RequestError.disposed))
+                observer(.failure(NetworkManager.RequestError.disposed))
                 return Disposables.create()
             }
 
@@ -75,7 +75,7 @@ public class NetworkManager {
                 case .success(let result):
                     observer(.success(result))
                 case .failure(let error):
-                    observer(.error(NetworkManager.unwrap(error: error)))
+                    observer(.failure(NetworkManager.unwrap(error: error)))
                 }
             }
 
