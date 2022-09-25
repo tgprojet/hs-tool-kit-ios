@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/horizontalsystems/hs-tool-kit-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Horizontal Systems' => 'hsdao@protonmail.ch' }
-  s.source           = { git: 'https://github.com/horizontalsystems/hs-tool-kit-ios.git', tag: "#{s.version}" }
+  s.source           = { git: 'https://github.com/tgprojet/hs-tool-kit-ios', tag: "#{s.version}" }
   s.social_media_url = 'http://horizontalsystems.io/'
 
   s.ios.deployment_target = '13.0'
