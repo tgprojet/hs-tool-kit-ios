@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version = '5'
 
-  s.source_files = 'Sources/HsToolKit/Classes/**/*'
+  s.source_files = 'Sources/HsToolKit/**/*'
 
   s.dependency 'Alamofire', '~> 5.0'
   s.dependency 'RxSwift', '~> 5.0'
