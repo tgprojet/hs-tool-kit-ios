@@ -11,6 +11,7 @@ public class NetworkManager {
         session = Session(eventMonitors: [networkLogger])
         self.logger = logger
     }
+    
 
     public func single<Mapper: IApiMapper>(request: DataRequest, mapper: Mapper, sync: Bool = false, postDelay: TimeInterval? = nil) -> Single<Mapper.T> {
         let serializer = JsonMapperResponseSerializer<Mapper>(mapper: mapper, logger: logger)
